@@ -1,0 +1,42 @@
+.friendList{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.item{  display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 20%;
+    margin: 0 auto;
+    border: 1px solid #c4c6c6;
+    box-shadow: 3px 4px 9px 4px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.status{
+    color: rgb(0, 3, 2);
+}
+
+.avatar{
+padding: 5px;
+width: 80px;
+height: 80px;
+}
+
+.name{
+    margin: 0;
+
+}
+
+.icon{
+
+}
+
+.true {
+    color: green;
+}
+
+.false{
+    color: red;
+}

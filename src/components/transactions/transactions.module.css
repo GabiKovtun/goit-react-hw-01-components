@@ -1,0 +1,16 @@
+.transactionHistory {
+  width: 800px;
+  margin: 0 auto;
+}
+
+thead {
+  background-color: aquamarine;
+  text-align: center;
+  border: 1px solid #410c0c;
+}
+
+tbody {
+  font-size: 25px;
+  text-align: center;
+  background-color: rgb(202, 203, 203);
+}

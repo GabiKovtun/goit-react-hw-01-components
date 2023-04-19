@@ -5,13 +5,15 @@ import data from './statistics/data.json';
 import { Statistics } from './statistics/statistics';
 import friends from './friendList/friends.json';
 import { FriendList } from './friendList/friendList';
+import transactions from './transactions/transactions.json';
+import { TransactionHistory } from './transactions/transactionsHistory';
 
 export const App = () => {
   return (
     <div
       style={{
         height: '100vh',
-        display: 'flex',
+        // display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
@@ -27,6 +29,7 @@ export const App = () => {
       />
       <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />;
     </div>
   );
 };

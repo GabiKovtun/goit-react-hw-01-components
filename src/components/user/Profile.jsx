@@ -1,29 +1,42 @@
-
+import PropTypes from 'prop-types';
+import css from './profile.module.css';
 
 export const UserProfile = ({ username, tag, location, avatar, stats }) => {
     return (
-     <div>
-<div>
-    <img
+     <div className={css.profile}>
+<div className={css.description}>
+    <img className={css.avatar}
      src={avatar}
      alt={username}
     />
-   <p>{username}</p>
-   <p>@{tag}</p>
-   <p>{location}</p>
+   <p className={css.name}>{username}</p>
+   <p className={css.tag}>@{tag}</p>
+   <p className={css.location}>{location}</p>
  </div>
- <ul>
-   <li>
-     <span>Followers</span>
-     <span>{stats.followers}</span>
+ <ul className={css.stats}>
+   <li className={css.statsElement}>
+     <span className={css.label}>Followers</span>
+     <span className={css.quantity}>{stats.followers}</span>
    </li>
-   <li>
-     <span>Views</span>
-     <span>{stats.views}</span>
+   <li className={css.statsElement}>
+     <span className={css.label}>Views</span>
+     <span className={css.quantity}>{stats.views}</span>
    </li>
-   <li>
-     <span>Likes</span>
-     <span>{stats.likes}</span>
+   <li className={css.statsElement}>
+     <span className={css.label}>Likes</span>
+     <span className={css.quantity}>{stats.likes}</span>
    </li>
  </ul>
 </div>)}
+
+UserProfile.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.shape({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number
+  })
+ }
