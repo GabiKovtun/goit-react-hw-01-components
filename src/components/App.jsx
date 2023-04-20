@@ -1,11 +1,11 @@
 import React from 'react';
-import user from './user/user.json';
-import { UserProfile } from './user/Profile';
-import data from './statistics/data.json';
-import { Statistics } from './statistics/statistics';
-import friends from './friendList/friends.json';
+import user from 'data/user.json';
+import { Profile } from './Profile/Profile';
+import data from 'data/data.json';
+import { Statistics } from './Statistics/statistics';
+import friends from 'data/friends.json';
 import { FriendList } from './friendList/friendList';
-import transactions from './transactions/transactions.json';
+import transactions from 'data/transactions.json';
 import { TransactionHistory } from './transactions/transactionsHistory';
 
 export const App = () => {
@@ -13,14 +13,13 @@ export const App = () => {
     <div
       style={{
         height: '100vh',
-        // display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
         color: '#010101',
       }}
     >
-      <UserProfile
+      <Profile
         username={user.username}
         tag={user.tag}
         location={user.location}
